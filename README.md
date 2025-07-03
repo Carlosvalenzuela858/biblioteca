@@ -353,3 +353,67 @@ Descripción: Gráfico tipo caja (boxplot) que representa la dispersión y valor
 
 Ejemplo visual:
 ![Image](https://github.com/user-attachments/assets/d60d965c-8fba-4f79-8dd1-eb10ad5ff9c2)
+
+
+## Recomendaciones por Género
+Este proyecto incluye un comando personalizado que permite obtener una lista de los 10 libros mejor calificados dentro de un género específico.
+
+### Archivo
+```bash
+libros/management/commands/libros_por_genero.py
+```
+
+### ¿Qué hace este script?
+- Solicita al usuario un ID de género por consola.
+- Filtra los libros que pertenecen a ese género.
+- Calcula el promedio de calificaciones de cada libro.
+- Ordena los libros de mayor a menor según ese promedio.
+- Muestra en consola los 10 libros con mejor valoración.
+
+### Ejecución
+Para ejecutarlo, usá el siguiente comando:
+```bash
+python manage.py libros_por_genero
+```
+Luego, el sistema te pedirá que ingreses un ID de género:
+```bash
+📥 Ingrese el ID del género: 3
+```
+Y el resultado se verá así:
+
+![Image](https://github.com/user-attachments/assets/e1918c98-d6b0-4960-abce-6c009d93553c)
+
+### Validaciones
+Si se ingresa un ID que no es un número, muestra un error.
+
+Si no se encuentran libros para ese género, informa al usuario con una advertencia.
+
+# Licencia
+Este proyecto está licenciado bajo los términos de la Licencia MIT.
+
+### Licencias de terceros
+Este proyecto utiliza varias bibliotecas de terceros. A continuación, se listan junto con sus respectivas licencias:
+```html
+ Name                           Version      License
+ Django                         5.2.3        BSD License
+ PyJWT                          2.9.0        MIT License
+ asgiref                        3.8.1        BSD License
+ contourpy                      1.3.2        BSD License
+ cycler                         0.12.1       BSD License
+ djangorestframework            3.16.0       BSD License
+ fonttools                      4.58.4       MIT
+ kiwisolver                     1.4.8        BSD License
+ matplotlib                     3.10.3       Python Software Foundation License
+ numpy                          2.3.1        BSD License
+ packaging                      25.0         Apache Software License; BSD License
+ pandas                         2.3.0        BSD License
+ pillow                         11.3.0       UNKNOWN
+ psycopg2-binary                2.9.10       GNU Library or Lesser General Public License (LGPL)
+ pyparsing                      3.2.3        MIT License
+ python-dateutil                2.9.0.post0  Apache Software License; BSD License
+ pytz                           2025.2       MIT License
+ seaborn                        0.13.2       BSD License
+ six                            1.17.0       MIT License
+ sqlparse                       0.5.3        BSD License
+ tzdata                         2025.2       Apache Software License
+```
